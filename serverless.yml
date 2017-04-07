@@ -1,0 +1,19 @@
+service: serverless-predeploy-plugin # NOTE: update this with your service name
+
+plugins:
+  - serverless-predeploy-plugin
+
+custom:
+  predeploy_commands:
+    - pwd
+    - echo "Hi there"
+
+# Both provider and functions are required
+
+# provider:
+#   name: aws
+#   runtime: nodejs4.3
+#
+# functions:
+#   hello:
+#     handler: handler.hello
