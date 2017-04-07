@@ -1,0 +1,13 @@
+{
+  "name": "serverless-predeploy-plugin",
+  "version": "1.0.0",
+  "main": "serverless-predeploy-plugin.js",
+  "keywords": [
+    "serverless",
+    "deploy",
+    "predeploy"
+  ],
+  "author": "Fell Sunderland",
+  "license": "ISC",
+  "description": "A plugin to give predeploy hooks for serverless"
+}
