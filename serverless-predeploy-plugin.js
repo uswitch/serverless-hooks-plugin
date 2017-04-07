@@ -6,15 +6,15 @@ class ServerlessPredeployPlugin {
     this.options = options;
 
     this.hooks = {
-      'before:deploy:initialize': this.predeployInstructions.bind(this),
+      'before:deploy:initialize': this.predeployCommands.bind(this),
     };
   }
 
-  predeployInstructions() {
-    this.serverless.service.custom.predeploy_instructions.forEach(
-      instruction => {
-        this.serverless.cli.log(`Running predeploy_instruction: "${instruction}"`)
-        exec(instruction)
+  predeployCommands() {
+    this.serverless.service.custom.predeploy_commands.forEach(
+      command => {
+        this.serverless.cli.log(`Running predeploy command: "${command}"`)
+        exec(command)
       }
     )
   }
