@@ -1,13 +1,17 @@
 {
   "name": "serverless-hooks-plugin",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "main": "serverless-hooks-plugin.js",
   "keywords": [
-    "serverless",
-    "deploy",
-    "predeploy"
+    "hooks",
+    "plugin",
+    "serverless"
   ],
   "author": "Fell Sunderland",
+  "repository" : {
+    "type": "git",
+    "url" : "https://github.com/uswitch/serverless-hooks-plugin.git"
+  },
   "license": "ISC",
   "description": "A plugin to give access from config to hooks for serverless"
 }
