@@ -1,4 +1,4 @@
-# Serverless Predeploy Plugin
+# Serverless Hooks Plugin
 
 ## How to use
 
