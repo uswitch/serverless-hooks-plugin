@@ -1,5 +1,7 @@
 'use strict';
 
+const execSync = require('child_process').execSync
+
 class ServerlessHooksPlugin {
 
   constructor(serverless, options) {
@@ -12,7 +14,10 @@ class ServerlessHooksPlugin {
         commands.forEach(
           command => {
             serverless.cli.log(`Running ${hook} command: "${command}"`)
-            exec(command)
+            var output = execSync(command).toString()
+            if (output) {
+              serverless.cli.log(output)
+            }
           }
         )
       }
