@@ -25,8 +25,8 @@ class ServerlessHooksPlugin {
 
     const hooksObj = {}
 
-    const custom = serverless.service.custom || {}
-    const hooks = custom.hooks || {}
+    serverless.service.custom = serverless.service.custom || {}
+    serverless.service.custom.hooks = serverless.service.custom.hooks || {}
     Object.keys(serverless.service.custom.hooks).forEach(
       hook => {
         hooksObj[hook] = buildHookFunction(hook)
